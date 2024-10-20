@@ -1,0 +1,65 @@
+<form [formGroup]="frmReg" (ngSubmit)="archive()" novalidate="">
+
+Roll Number:<input type="text" name="rno" [(ngModel)]="regObj.rollno" formControlName="rollno">
+<h5 *ngIf="frmReg.controls.rollno.touched && frmReg.controls.rollno.invalid">Roll Number Should Only Contain Numerical Value</h5><br><br>
+
+Student Name:<input type="text" name="sname" [(ngModel)]="regObj.student_name" formControlName="student_name">
+<h5 *ngIf="frmReg.controls.student_name.touched && frmReg.controls.student_name.invalid">Name Should Only Contain Alphabets</h5><br><br>
+
+Education:<input type="text" name="educ" [(ngModel)]="regObj.education" formControlName="education">
+<h5 *ngIf="frmReg.controls.education.touched && frmReg.controls.education.invalid">Education Should Only Contain Alphabets</h5><br><br>
+
+Subject-1_Marks:<input type="text" name="sub1" [(ngModel)]="regObj.subject1_marks" formControlName="subject1_marks">
+<h5 *ngIf="frmReg.controls.subject1_marks.touched && frmReg.controls.subject1_marks.invalid">Marks should be Numeric Value</h5><br><br>
+
+Subject-2_Marks:<input type="text" name="sub2" [(ngModel)]="regObj.subject2_marks" formControlName="subject2_marks">
+<h5 *ngIf="frmReg.controls.subject2_marks.touched && frmReg.controls.subject2_marks.invalid">Marks should be Numeric Value</h5><br><br>
+
+Subject-3_Marks:<input type="text" name="sub3" [(ngModel)]="regObj.subject3_marks" formControlName="subject3_marks">
+<h5 *ngIf="frmReg.controls.subject3_marks.touched && frmReg.controls.subject3_marks.invalid">Marks should be Numeric Value</h5><br><br>
+
+Subject-4_Marks:<input type="text" name="sub4" [(ngModel)]="regObj.subject4_marks" formControlName="subject4_marks">
+<h5 *ngIf="frmReg.controls.subject4_marks.touched && frmReg.controls.subject4_marks.invalid">Marks should be Numeric Value</h5><br><br>
+
+Subject-5_Marks:<input type="text" name="sub5" [(ngModel)]="regObj.subject5_marks" formControlName="subject5_marks">
+<h5 *ngIf="frmReg.controls.subject5_marks.touched && frmReg.controls.subject5_marks.invalid">Marks should be Numeric Value</h5><br><br>
+
+<input type="submit" value="POST" [disabled]="frmReg.invalid"><br><br>
+
+</form>
+<br>
+<br>
+
+<table>
+    <tr>
+        <th>Student-Id</th>
+        <th>Student-Name</th>
+        <th>Roll-Number</th>
+        <th>Education</th>
+        <th>Subject-1_Marks</th>
+        <th>Subject-2_Marks</th>
+        <th>Subject-3_Marks</th>
+        <th>Subject-4_Marks</th>
+        <th>Subject-5_Marks</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+        <th>Delete Record</th>
+        <th>Update Record</th>
+    </tr>
+
+    <tr *ngFor="let stu of studArr;">
+        <td>{{stu.id}}</td>
+        <td>{{stu.rollno}}</td>
+        <td>{{stu.student_name}}</td>
+        <td>{{stu.education}}</td>
+        <td>{{stu.subject1_marks}}</td>
+        <td>{{stu.subject2_marks}}</td>
+        <td>{{stu.subject3_marks}}</td>
+        <td>{{stu.subject4_marks}}</td>
+        <td>{{stu.subject5_marks}}</td>
+        <td>{{stu.percentage}}</td>
+        <td>{{stu.grade}}</td>
+        <td><button (click)="deleteRecord(stu.id)">Delete</button></td>
+        <td><button class="btn1" (click)="updateRecord(stu.id)">Update</button></td>
+    </tr>
+</table>

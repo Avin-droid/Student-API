@@ -1,0 +1,132 @@
+form 
+{  
+    max-width: 500px;
+    margin: 0 auto;
+    padding:20px;
+    border:1px solid black;
+    border-radius:10px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+input[type="text"] 
+{
+    width: 100%;
+    padding: 10px;
+    margin: 10px ,0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input.ng-valid
+{
+    border-color: green;
+}
+
+input.ng-invalid .ng-touched
+{
+    border-color: red;
+}
+
+input[type="submit"] 
+{
+    width:20%;
+    padding: 10px;
+    margin:5px;
+    background-color: green;
+    color:rgba(245,245,245,0.895);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:disabled
+{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+h5 
+{
+    color: red;
+    font-size: 14px;
+    margin: 0;
+}
+
+h6
+{
+    color :brown;
+    font-size: 14px;
+    margin: 0;
+}
+
+td button 
+{
+    justify-content: center;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color:whitesmoke;
+    margin:0,auto;
+    display: block;
+}
+
+td button:hover 
+{
+  background-color:rgba(255, 0, 0, 0.6);
+}
+
+td .btn1 
+{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: whitesmoke;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+  
+td .btn1:hover 
+{
+    background-color: rgba(0, 128, 0, 0.571)
+}
+  
+
+table 
+{
+    border-collapse: collapse;
+    width: 70%;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    
+}
+
+th, td 
+{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th 
+{
+    background-color: #f2f2f2;
+    color: black;
+    font-weight: bold;
+}
+
+tr:nth-child(even) 
+{
+    background-color: #f9f9f9;
+}
+
+td 
+{
+    padding: 12px;
+}
+
